@@ -1,6 +1,9 @@
 package com.mb.service;
 
 import java.util.List;
+
+import org.springframework.web.multipart.MultipartFile;
+
 import com.mb.model.Watch;
 
 public interface WatchService {

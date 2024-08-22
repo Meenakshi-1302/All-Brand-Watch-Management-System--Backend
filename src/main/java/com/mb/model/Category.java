@@ -50,6 +50,38 @@ public class Category {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+//	public Category(int categoryId, String name, String description, ProductList product) {
+//		super();
+//		this.categoryId = categoryId;
+//		this.name = name;
+//		this.description = description;
+//		this.product = product;
+//	}
+//	public int getCategoryId() {
+//		return categoryId;
+//	}
+//	public void setCategoryId(int categoryId) {
+//		this.categoryId = categoryId;
+//	}
+//	public String getName() {
+//		return name;
+//	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	public String getDescription() {
+//		return description;
+//	}
+//	public void setDescription(String description) {
+//		this.description = description;
+//	}
+//	public ProductList getProduct() {
+//		return product;
+//	}
+//	public void setProduct(ProductList product) {
+//		this.product = product;
+//	}
+	
 	
 	
 

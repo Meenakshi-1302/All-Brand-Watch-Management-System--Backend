@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.mb.model.ProductList;
 import com.mb.serviceimpl.ProductListServiceImpl;
@@ -21,24 +22,21 @@ import com.mb.serviceimpl.ProductListServiceImpl;
 public class ProductListController {
 	@Autowired
 	ProductListServiceImpl productlistserviceimpl;
+	
 	@PostMapping
 	public String insertProduct(@RequestBody ProductList product) {
-		String msg="";
-		try {
+		
 			productlistserviceimpl.addProduct(product);
-			msg="Success";
-		}
-		catch(Exception e) {
-			msg="Failure";
-		}
-		return msg;
+			return "Success";
 		
 	}
+	
 	@GetMapping("{productId}")
 	public ProductList getProductById(@PathVariable("productId") int id) {
 		return productlistserviceimpl.findProductById(id);
 		
 	}
+	
 	@GetMapping("/all")
 	public List<ProductList> getProducts(){
 		return productlistserviceimpl.findAllProducts();

@@ -23,13 +23,8 @@ public class ProductListRepositoryImpl implements ProductListRepository {
 	
 	@Override
 	public String addProduct(ProductList product) {
-		if(product!=null) {
-			entitymanager.merge(product);
-			return "success";
-			}
-			else {
-				return "insertion failed";
-			}
+		entitymanager.persist(product);
+		return "";
 	}
 
 	@Override

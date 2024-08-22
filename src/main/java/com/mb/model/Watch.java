@@ -32,7 +32,7 @@ public class Watch {
 	private String category;
 	
 	@Lob
-    @Column(name="ImageUrl",length=100000)
+    @Column(name="ImageUrl",length=1000000000)
     private byte[] imageUrl;
 	
 	public Watch() {
@@ -108,6 +108,8 @@ public class Watch {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+
+	
 	
 	
 

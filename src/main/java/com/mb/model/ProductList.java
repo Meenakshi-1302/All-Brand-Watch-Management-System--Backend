@@ -1,6 +1,5 @@
 package com.mb.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -19,23 +18,21 @@ public class ProductList {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int productId;
+	
 	@OneToOne 
     @JoinColumn(name = "watch_id", referencedColumnName = "watch_id") 
     private Watch watch;
+	
 	@OneToMany(mappedBy = "categoryId", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Category> categories = new ArrayList<>();
-//	@OneToMany(mappedBy = "feedbackId", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<Feedback> feedback  = new ArrayList<>();
+    private List<Category> categories;
 	public ProductList() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public ProductList(int productId, Watch watch, List<Category> categories) {
 		super();
 		this.productId = productId;
 		this.watch = watch;
 		this.categories = categories;
-		//this.feedback = feedback;
 	}
 	public int getProductId() {
 		return productId;
