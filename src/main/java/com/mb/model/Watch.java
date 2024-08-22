@@ -31,9 +31,9 @@ public class Watch {
 	@Column(name="Category")
 	private String category;
 	
-	@Lob
+	
     @Column(name="ImageUrl",length=1000000000)
-    private byte[] imageUrl;
+    private String imageUrl;
 	
 	public Watch() {
 		super();
@@ -41,7 +41,7 @@ public class Watch {
 	}
 	
 	public Watch(int watch_id, int brand_id, String model_number, String name, String description, double price,
-			int stock_quantity, String category, byte[] imageUrl) {
+			int stock_quantity, String category, String imageUrl) {
 		super();
 		this.watch_id = watch_id;
 		this.brand_id = brand_id;
@@ -99,10 +99,10 @@ public class Watch {
 	public String getCategory() {
 		return category;
 	}
-	public byte[] getImageUrl() {
+	public String getImageUrl() {
 		return imageUrl;
 	}
-	public void setImageUrl(byte[] imageUrl) {
+	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
 	public void setCategory(String category) {

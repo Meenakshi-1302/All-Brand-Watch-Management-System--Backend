@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mb</groupId>
-	<artifactId>MicroBackend</artifactId>
+	<artifactId>MicroBackend1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MicroBackend</name>
 	<description>Demo project for Spring Boot</description>

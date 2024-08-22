@@ -47,17 +47,17 @@ public class WatchServiceImpl implements WatchService {
 		return watchrepository.findById(id);
 	}
 
-	public byte[] getWatchImage(int watchId) {
-        // Fetch the watch entity by ID
-        Watch watch = watchrepository.findById(watchId);
-
-        if (watch != null) {
-            // Return the image bytes
-            return watch.getImageUrl();
-        } else {
-            // Return null or handle the case where the watch does not exist
-            return null;
-        }
-    }
+//	public byte[] getWatchImage(int watchId) {
+//        // Fetch the watch entity by ID
+//        Watch watch = watchrepository.findById(watchId);
+//
+//        if (watch != null) {
+//            // Return the image bytes
+//            return watch.getImageUrl();
+//        } else {
+//            // Return null or handle the case where the watch does not exist
+//            return null;
+//        }
+//    }
 
 }
